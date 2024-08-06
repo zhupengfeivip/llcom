@@ -1,0 +1,51 @@
+﻿<Page x:Class="llcom.Pages.BaseConversion"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:llcom.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="400"
+      Title="BaseConversion">
+
+    <Grid>
+        <Canvas>
+            <TextBlock
+                VerticalAlignment="Top"
+                Text="{DynamicResource HexLabelText}" Canvas.Left="15" Canvas.Top="20" />
+            <TextBox
+                Name="DecTextBox"
+                FontFamily="Consolas"
+                TextWrapping="Wrap" TextAlignment="Right" Canvas.Left="70" Canvas.Top="20" VerticalAlignment="Top" Width="100" Height="25" />
+            <Button
+                Name="DecConvertButton"
+                HorizontalAlignment="Right"
+                Content="{DynamicResource BaseConvertButtonText}" Click="DecConvertButton_OnClick" Canvas.Left="180" Canvas.Top="20" Width="50" />
+            <TextBlock
+                VerticalAlignment="Top"
+                Text="{DynamicResource DecLabelText}" Canvas.Left="15" Canvas.Top="50" />
+            <TextBox
+                Name="HexTextBox"
+                FontFamily="Consolas"
+                TextWrapping="Wrap"
+                VerticalScrollBarVisibility="Auto" TextAlignment="Right" Canvas.Left="70" Canvas.Top="50" VerticalAlignment="Top" Width="100" Height="25" />
+            <Button
+                Name="HexConvertButton"
+                HorizontalAlignment="Center"
+                Content="{DynamicResource BaseConvertButtonText}" Click="HexConvertButton_OnClick" Canvas.Left="180" Canvas.Top="50" Width="50" />
+            <TextBlock
+                VerticalAlignment="Top"
+                Text="{DynamicResource SecLabelText}" Canvas.Left="15" Canvas.Top="80" />
+            <TextBox
+                Name="SecTextBox"
+                FontFamily="Consolas"
+                TextWrapping="Wrap"
+                VerticalScrollBarVisibility="Auto" TextAlignment="Right" Canvas.Left="70" Canvas.Top="80" VerticalAlignment="Top" Width="100" Height="25" />
+            <Button
+                Name="SecConvertButton"
+                HorizontalAlignment="Center"
+                Content="{DynamicResource BaseConvertButtonText}" Click="SecConvertButton_OnClick" Canvas.Left="180" Canvas.Top="80" Width="50" />
+        </Canvas>
+
+    </Grid>
+</Page>

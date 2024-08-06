@@ -666,6 +666,9 @@
                     <TabItem Header="WinUSB">
                         <Frame Name="WinUSBFrame" NavigationUIVisibility="Hidden" />
                     </TabItem>
+                    <TabItem Header="{DynamicResource BaseConversionHeader}">
+                        <Frame Name="BaseConversion" NavigationUIVisibility="Hidden" />
+                    </TabItem>
                 </TabControl>
             </TabItem>
             <TabItem Header="{DynamicResource AboutCard}">

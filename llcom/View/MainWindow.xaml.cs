@@ -200,6 +200,9 @@ namespace llcom
                     //WinUSB
                     WinUSBFrame.Navigate(new Uri("Pages/WinUSBPage.xaml", UriKind.Relative));
 
+                    // BaseConversion
+                    BaseConversion.Navigate(new Uri("Pages/BaseConversion.xaml", UriKind.Relative));
+
                     this.Title += $" - {System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString()}";
 
                     TongjiWebBrowser.Source = new Uri(
@@ -1365,12 +1368,17 @@ namespace llcom
             if (!(Keyboard.IsKeyDown(Key.LeftCtrl) || Keyboard.IsKeyDown(Key.RightCtrl)) ||
                 !Tools.Global.setting.terminal)
                 return;
+
             if (e.Key >= Key.A && e.Key <= Key.Z && Tools.Global.uart.IsOpen())
+            {
                 try
                 {
                     Tools.Global.uart.SendData(new byte[] { (byte)((int)e.Key - (int)Key.A + 1) });
                 }
-                catch { }
+                catch
+                {
+                }
+            }
         }
     }
 }

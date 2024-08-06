@@ -244,6 +244,9 @@
     <Compile Include="Model\LinePlotPoint.cs" />
     <Compile Include="Model\LuaFolding.cs" />
     <Compile Include="Model\OnlineScript.cs" />
+    <Compile Include="Pages\BaseConversion.xaml.cs">
+      <DependentUpon>BaseConversion.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Convert.cs" />
     <Compile Include="Pages\ConvertPage.xaml.cs">
       <DependentUpon>ConvertPage.xaml</DependentUpon>
@@ -305,6 +308,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="languages\zh-CN.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\BaseConversion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
